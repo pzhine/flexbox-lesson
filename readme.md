@@ -26,7 +26,7 @@ Write CSS for [this html](warmup.html) so that it looks like this in the browser
 # Lecture
 
 ## Webpack and CSS
-Start with a new clone of the [simple react setup](https://github.com/nmadd/simple-react-setup)
+Start with a new clone of the [simple react setup](https://github.com/nmadd/simple-react-setup). Then run:
 ```
 npm install
 npm install --save-dev css-loader style-loader
