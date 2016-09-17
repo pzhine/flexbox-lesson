@@ -23,5 +23,22 @@
 Write CSS for [this html](warmup.html) so that it looks like this in the browser:  
 ![mockup](warmup.png)
 
+# Lecture
 
-
+## Webpack and CSS
+Start with a new clone of the [simple react setup](https://github.com/nmadd/simple-react-setup)
+```
+npm install
+npm install --save-dev css-loader style-loader
+```
+Add the following line to your App.js file:
+```javascript
+var css = require("style!css!./App.css");
+```
+Now clear out App.css and add the following line:
+```css
+h1 {
+  color: red;
+}
+```
+Run `npm start` and your "Hello world" header should be red!
