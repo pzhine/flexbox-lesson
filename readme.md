@@ -62,7 +62,8 @@ Now we can use any of the [FontAwesome icons](http://fontawesome.io/icons/) in o
 ## Exercise 1: Style our giphy App
 ![mockup](giphy1.png) 
 ![mockup](giphy2.png)
-- Font: [Roboto light](https://fonts.google.com/specimen/Roboto?selection.family=Roboto:300)
+Font: [Roboto light](https://fonts.google.com/specimen/Roboto?selection.family=Roboto:300)
+
 ### Ternary operator
 Remember the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)? We're going to use it to keep our code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
@@ -107,9 +108,16 @@ render() {
 ### background-size for responsive images
 We'll use [inline styles](https://facebook.github.io/react/tips/inline-styles.html) and some the [background-size attributes](https://css-tricks.com/almanac/properties/b/background-size/) to make our giphy fit its container perfectly.
 
+```html
+<div 
+  className="resultsRow" 
+  style={{backgroundImage: 'url(' + this.state.src + ')'}}
+/>
+```
 
 ## Exercise 2: Chat Widget App
 We're buiding a chat widget similar to the one on Facebook
+
 ![mockup](widget.png)
 
 ### Step 1: Diagram our boxes
