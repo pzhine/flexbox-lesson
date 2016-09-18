@@ -42,3 +42,46 @@ h1 {
 }
 ```
 Run `npm start` and your "Hello world" header should be red!
+
+## Webpack and Glyph fonts
+The [Get Started](http://fontawesome.io/get-started/) directions for FontAwesome work in our webpack project. You can use this CDN script tag in your index.html:
+```html
+<head>
+  ...
+  <script src="https://use.fontawesome.com/2af5f3d917.js"></script>
+</head>
+```
+Now we can use any of the [FontAwesome icons](http://fontawesome.io/icons/) in our app. Try the following in your App.js. Note that we have to use `className`, not just `class` for this to work:
+```html
+<div>
+  <h1>Hello World!</h1>
+  <i className="fa fa-camera-retro"></i> fa-camera-retro
+</div>
+```
+
+## Exercise 1: Style your giphy App
+![mockup](giphy1.png) ![mockup](giphy2.png)
+
+## Exercise 2: Chat Widget App
+We're buiding a chat widget similar to the one on Facebook
+
+### Step 1: Diagram our boxes
+![mockup](widget.png)
+- define the name and boundaries for each box element
+- Link to [CSS diagraming Google Drawing](https://docs.google.com/drawings/d/1u2aHIdqPMURSsZKUHA0tBlovr9fVyex0WUGC682Bybg/edit?usp=sharing)
+
+### Step 2: Write our HTML
+- Use your CSS diagram to structure your HTML
+- Add "placeholder" or "lorem ipsum" content to help you layout your elements
+
+### Step 3: Write our CSS
+- Use your CSS diagram to guide your code
+- Use the [Flexbox demo tool](https://github.com/pzhine/flexboxdemo) or [Flexbox cheatsheet](http://apps.workflower.fi/css-cheats/?name=flexbox) to help with syntax
+- Style one "level" at a time
+
+### Step 4: Diagram our React components
+- Define the names and properties for our components
+- Link to [CSS diagraming Google Drawing](https://docs.google.com/drawings/d/1u2aHIdqPMURSsZKUHA0tBlovr9fVyex0WUGC682Bybg/edit?usp=sharing)
+
+### Step 5: Build our React components
+- Start at the "lowest level" (last frame in our diagram) and work up
