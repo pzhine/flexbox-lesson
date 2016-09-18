@@ -59,14 +59,60 @@ Now we can use any of the [FontAwesome icons](http://fontawesome.io/icons/) in o
 </div>
 ```
 
-## Exercise 1: Style your giphy App
-![mockup](giphy1.png) ![mockup](giphy2.png)
+## Exercise 1: Style our giphy App
+![mockup](giphy1.png) 
+![mockup](giphy2.png)
+- Font: [Roboto light](https://fonts.google.com/specimen/Roboto?selection.family=Roboto:300)
+### Ternary operator
+Remember the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)? We're going to use it to keep our code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+
+```javascript
+render() {
+  if (this.state.present) {
+    return (
+      <div>
+        <input id="find" type="text" placeholder="giphy"></input>
+        <button onClick={this.fetchGIF}>Get Giphy</button>
+        <img src={this.state.src}></img>
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <input id="find" type="text" placeholder="giphy"></input>
+        <button onClick={this.fetchGIF}>Get Giphy</button>
+      </div>
+    )
+  }
+}
+```
+Becomes...
+
+```javscript
+render() {
+  return (
+    <div>
+      <input id="find" type="text" placeholder="search giphy"></input>
+      <button onClick={this.fetchGIF}>Get Giphy</button>
+      {
+        this.state.present ? (
+          <img src={this.state.src}></img>
+        ) : null
+      }
+    </div>
+  )
+}
+```
+
+### background-size for responsive images
+We'll use [inline styles](https://facebook.github.io/react/tips/inline-styles.html) and some the [background-size attributes](https://css-tricks.com/almanac/properties/b/background-size/) to make our giphy fit its container perfectly.
+
 
 ## Exercise 2: Chat Widget App
 We're buiding a chat widget similar to the one on Facebook
+![mockup](widget.png)
 
 ### Step 1: Diagram our boxes
-![mockup](widget.png)
 - define the name and boundaries for each box element
 - Link to [CSS diagraming Google Drawing](https://docs.google.com/drawings/d/1u2aHIdqPMURSsZKUHA0tBlovr9fVyex0WUGC682Bybg/edit?usp=sharing)
 
@@ -85,3 +131,11 @@ We're buiding a chat widget similar to the one on Facebook
 
 ### Step 5: Build our React components
 - Start at the "lowest level" (last frame in our diagram) and work up
+
+## Challenge exercises
+
+### Loading spinner
+In the Giphy app, use the FontAwesome "spinner" icon and [fa-spin](http://fontawesome.io/examples/#animated) class to show a spinner while the app is waiting for the Giphy API to respond. You can use jQuery or React to control the visibility of the spinner, but React is preferred.
+
+### Chat widget minimize
+In the Chat Widget app, add a feature so that when you click the name row at the top, it minimizes the widget to a bar at the bottom of the page, like it does in Facebook. When you click the bar, it shows the full widget (restores the widget).
