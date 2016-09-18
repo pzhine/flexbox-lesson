@@ -143,7 +143,7 @@ We're buiding a chat widget similar to the one on Facebook
 ## Challenge exercises
 
 ### Loading spinner
-In the Giphy app, use the FontAwesome "spinner" icon and [fa-spin](http://fontawesome.io/examples/#animated) class to show a spinner while the app is waiting for the Giphy API to respond. You can use jQuery or React to control the visibility of the spinner, but React is preferred.
+In the Giphy app, use the FontAwesome "spinner" icon and [fa-pulse](http://fontawesome.io/examples/#animated) class to show a spinner while the app is waiting for the Giphy API to respond. You can use jQuery or React to control the visibility of the spinner, but React is preferred.
 
 ### Chat widget minimize
 In the Chat Widget app, add a feature so that when you click the name row at the top, it minimizes the widget to a bar at the bottom of the page, like it does in Facebook. When you click the bar, it shows the full widget (restores the widget).
