@@ -33,7 +33,7 @@ npm install --save-dev css-loader style-loader
 ```
 Add the following line to your App.js file:
 ```javascript
-var css = require("style!css!./App.css");
+var css = require("./App.css");
 ```
 Now clear out App.css and add the following line:
 ```css
