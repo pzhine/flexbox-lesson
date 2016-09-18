@@ -89,7 +89,7 @@ render() {
 ```
 Becomes...
 
-```javscript
+```javascript
 render() {
   return (
     <div>
